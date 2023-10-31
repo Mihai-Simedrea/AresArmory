@@ -1,3 +1,5 @@
+@use '../../../theme.scss' as *;
+
 .container {
     display: flex;
     justify-content: center;
@@ -14,4 +16,13 @@
     height: 300px;
     border-left: 1px solid #ccc;
     margin: 0 100px;
+}
+
+a {
+    color: $my-grey-400;
+    text-decoration: none;
+}
+
+.info {
+    margin-top: 15px;
 }

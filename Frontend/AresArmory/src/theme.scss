@@ -34,6 +34,8 @@ $my-grey: (
   )
 );
 
+$my-grey-400: map-get($my-grey, 400);
+
 $my-app-primary: mat-palette($my-grey);
 $my-app-accent: mat-palette($my-grey, A200, A100, A400);
 

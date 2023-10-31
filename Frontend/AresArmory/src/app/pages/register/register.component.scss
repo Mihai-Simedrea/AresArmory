@@ -1,3 +1,5 @@
+@use '../../../theme.scss' as *;
+
 .container {
     display: flex;
     justify-content: center;
@@ -18,4 +20,13 @@
 
 .img {
     pointer-events: none;
+}
+
+a {
+    color: $my-grey-400;
+    text-decoration: none;
+}
+
+.info {
+    margin-top: 15px;
 }
