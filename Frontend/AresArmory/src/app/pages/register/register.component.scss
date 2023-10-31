@@ -9,3 +9,13 @@
     display: flex;
     flex-direction: column;
 }
+
+.vertical-line {
+    height: 300px;
+    border-left: 1px solid #ccc;
+    margin: 0 100px;
+}
+
+.img {
+    pointer-events: none;
+}

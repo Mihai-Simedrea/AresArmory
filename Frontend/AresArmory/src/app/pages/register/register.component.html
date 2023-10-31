@@ -1,21 +1,25 @@
-<div class="container">
-    <div class="form">
-        <mat-form-field>
+<div class="container" style="display: flex; align-items: center;">
+    <div class="form" style="display: flex; flex-direction: column; justify-content: center;">
+        <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Username</mat-label>
             <input matInput>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Email</mat-label>
             <input matInput>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Phone Number</mat-label>
             <input matInput>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Password</mat-label>
             <input matInput>
         </mat-form-field>
-        <button mat-button mat-raised-button color="primary">Register</button>
+        <button mat-button mat-raised-button color="primary" style="margin-bottom: 10px;">Register</button>
     </div>
+
+    <div class="vertical-line"></div>
+
+    <img class="img" [src]="imagePath" alt="Your Image" style="max-width: 100%; height: 600px;">
 </div>

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-
+  imagePath: string = '../../../assets/210597d3-7068-4503-8f7e-1edeb82d12b3.jpg';
 }
