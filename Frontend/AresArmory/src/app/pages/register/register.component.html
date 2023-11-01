@@ -2,21 +2,21 @@
     <div class="form" style="display: flex; flex-direction: column; justify-content: center;">
         <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Username</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="authModel.name">
         </mat-form-field>
         <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Email</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="authModel.email">
         </mat-form-field>
         <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Phone Number</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="authModel.contactNumber">
         </mat-form-field>
         <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Password</mat-label>
-            <input matInput>
+            <input matInput [(ngModel)]="authModel.password">
         </mat-form-field>
-        <button mat-button mat-raised-button color="primary" style="margin-bottom: 10px;">Register</button>
+        <button mat-button mat-raised-button color="primary" style="margin-bottom: 10px;" (click)="register()">Register</button>
         <p class="info">Already have an account? <a href="/login">Login here</a></p>
     </div>
 
