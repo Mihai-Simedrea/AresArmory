@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { AuthClient } from 'src/app/backend/api';
 import { AuthModel } from 'src/app/components/shared/models/auth.model';
 
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
   constructor(private readonly authClient: AuthClient,
-    private readonly snackBarService: MatSnackBar) {
+    private readonly snackBarService: MatSnackBar,
+    private readonly router: Router) {
     this.authModel = new AuthModel();
   }
 
@@ -31,6 +33,7 @@ export class RegisterComponent implements OnInit {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
       });
+      this.router.navigate(['/login']);
     },
       () => {
         this.snackBarService.open(`Error creating the account`, 'Ok', {
