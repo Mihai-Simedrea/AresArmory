@@ -13,6 +13,6 @@ export class AuthClient {
   constructor(private http: HttpClient) {}
 
   signUp(authModel: AuthModel): Observable<any> {
-    return this.http.post<any>(`http://localhost:8080/user/signup`, authModel);
+    return this.http.post<any>(`${this.baseUrl}/signup`, authModel);
   }
 }
