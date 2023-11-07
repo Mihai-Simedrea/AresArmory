@@ -40,9 +40,32 @@ public class UserServiceImpl implements UserService {
         return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    @Override
+    public ResponseEntity<User> login(Map<String, String> requestMap) {
+        log.info("Inside login {}", requestMap);
+        try {
+            if (validateLoginMap(requestMap)) {
+                User user = userDao.findByEmailId(requestMap.get("email"));
+                if (!Objects.isNull(user)) {
+                    return new ResponseEntity<>(user, HttpStatus.OK);
+                } else
+                    return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+            } else
+                return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+
+    }
+
     private boolean validateSignUpMap(Map<String, String> requestMap) {
         return requestMap.containsKey("name") && requestMap.containsKey("contactNumber")
                 && requestMap.containsKey("email") && requestMap.containsKey("password");
+    }
+
+    private boolean validateLoginMap(Map<String, String> requestMap) {
+        return requestMap.containsKey("email") && requestMap.containsKey("password");
     }
 
     private User getUserFromMap(Map<String, String> requestMap) {
