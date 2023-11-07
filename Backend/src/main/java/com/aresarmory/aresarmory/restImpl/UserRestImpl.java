@@ -1,6 +1,5 @@
 package com.aresarmory.aresarmory.restImpl;
 
-import com.aresarmory.aresarmory.POJO.User;
 import com.aresarmory.aresarmory.constants.ArmoryConstants;
 import com.aresarmory.aresarmory.rest.UserRest;
 import com.aresarmory.aresarmory.service.UserService;
@@ -29,12 +28,12 @@ public class UserRestImpl implements UserRest {
     }
 
     @Override
-    public ResponseEntity<User> login(Map<String, String> requestMap) {
+    public ResponseEntity<String> login(Map<String, String> requestMap) {
         try {
             return userService.login(requestMap);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

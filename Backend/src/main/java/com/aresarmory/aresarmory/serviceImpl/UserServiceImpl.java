@@ -41,21 +41,21 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ResponseEntity<User> login(Map<String, String> requestMap) {
+    public ResponseEntity<String> login(Map<String, String> requestMap) {
         log.info("Inside login {}", requestMap);
         try {
             if (validateLoginMap(requestMap)) {
                 User user = userDao.findByEmailId(requestMap.get("email"));
                 if (!Objects.isNull(user)) {
-                    return new ResponseEntity<>(user, HttpStatus.OK);
+                    return new ResponseEntity<>(user.getName(), HttpStatus.OK);
                 } else
-                    return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+                    return ArmoryUtils.getResponseEntity("Account not found", HttpStatus.BAD_REQUEST);
             } else
-                return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+                return ArmoryUtils.getResponseEntity(ArmoryConstants.INVALID_DATA, HttpStatus.BAD_REQUEST);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
 
     }
 

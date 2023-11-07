@@ -16,5 +16,5 @@ public interface UserRest {
     public ResponseEntity<String> signUp(@RequestBody(required = true) Map<String, String> requestMap);
 
     @GetMapping(path = "/login")
-    public ResponseEntity<User> login(@RequestBody(required = true) Map<String, String> requestMap);
+    public ResponseEntity<String> login(@RequestBody(required = true) Map<String, String> requestMap);
 }
