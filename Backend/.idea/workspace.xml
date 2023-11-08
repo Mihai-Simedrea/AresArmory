@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8a2bf6-8514-4df0-b570-4f0a3c3139f6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/UserRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

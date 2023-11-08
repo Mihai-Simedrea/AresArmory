@@ -5,6 +5,7 @@ import com.aresarmory.aresarmory.constants.ArmoryConstants;
 import com.aresarmory.aresarmory.dao.UserDao;
 import com.aresarmory.aresarmory.service.UserService;
 import com.aresarmory.aresarmory.utils.ArmoryUtils;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -47,7 +48,9 @@ public class UserServiceImpl implements UserService {
             if (validateLoginMap(requestMap)) {
                 User user = userDao.findByEmailId(requestMap.get("email"));
                 if (!Objects.isNull(user)) {
-                    return new ResponseEntity<>(user.getName(), HttpStatus.OK);
+                    ObjectMapper objectMapper = new ObjectMapper();
+                    String jsonString = objectMapper.writeValueAsString(Map.of("username", user.getName()));
+                    return ResponseEntity.ok().body(jsonString);
                 } else
                     return ArmoryUtils.getResponseEntity("Account not found", HttpStatus.BAD_REQUEST);
             } else
