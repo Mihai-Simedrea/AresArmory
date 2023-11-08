@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthClient } from 'src/app/backend/api';
 import { LoginModel } from 'src/app/components/shared/models/login.model';
 
@@ -11,7 +12,8 @@ export class LoginComponent implements OnInit {
   imagePath: string = '../../../assets/79403162-8cd3-4052-a8c8-d69831c48ce4.jpg';
   loginModel: LoginModel;
 
-  constructor(private readonly authClient: AuthClient) {
+  constructor(private readonly authClient: AuthClient,
+              private readonly router: Router) {
     this.loginModel = new LoginModel();
   }
 
@@ -23,7 +25,7 @@ export class LoginComponent implements OnInit {
     console.log(this.loginModel);
     
     this.authClient.login(this.loginModel).subscribe(result => {
-      console.log(result);
+      this.router.navigate(['/home']);
     },
     () => {
       console.log('error');
