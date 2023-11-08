@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
       });
+      localStorage.setItem("username", result.username);
       this.router.navigate(['/home']);
     },
       () => {
