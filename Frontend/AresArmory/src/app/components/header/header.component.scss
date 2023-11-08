@@ -1,0 +1,38 @@
+.custom-toolbar {
+    font-family: 'Arial', sans-serif;
+    height: 64px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.store-name {
+    font-size: 24px;
+    color: #ffffff;
+    margin-left: 24px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-text {
+    color: #ffffff;
+}

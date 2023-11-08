@@ -15,6 +15,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { HomeComponent } from './pages/home/home.component';
     LoginComponent,
     RegisterComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { HomeComponent } from './pages/home/home.component';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
