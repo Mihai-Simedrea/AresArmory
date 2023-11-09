@@ -5,13 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8a2bf6-8514-4df0-b570-4f0a3c3139f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/CategoryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CategoryRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CategoryRestImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CategoryServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/pages/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/constants/ArmoryConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/constants/ArmoryConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aresarmory/aresarmory/constants/ArmoryConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aresarmory/aresarmory/constants/ArmoryConstants.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -46,6 +61,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "ffbe0c0c381415392747fed7193aa281",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -58,21 +74,11 @@
       <option name="presentableId" value="Default" />
       <updated>1699361434774</updated>
       <workItem from="1699361436492" duration="366000" />
+      <workItem from="1699548112014" duration="3397000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/UserRestImpl.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
