@@ -17,10 +17,10 @@ public class CategoryRestImpl implements CategoryRest {
     CategoryService categoryService;
 
     @Override
-    public ResponseEntity<String> addNewCategory(Map<String, String> requestMap, String email){
+    public ResponseEntity<String> addNewCategory(Map<String, String> requestMap){
         try
         {
-            return categoryService.addNewCategory(requestMap, email);
+            return categoryService.addNewCategory(requestMap);
         }
         catch(Exception ex)
         {

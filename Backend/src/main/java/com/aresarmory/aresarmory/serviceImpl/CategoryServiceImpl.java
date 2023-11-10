@@ -22,10 +22,10 @@ public class CategoryServiceImpl  implements CategoryService {
     UserDao userDao;
 
     @Override
-    public ResponseEntity<String> addNewCategory(Map<String, String> requestMap, String email)
+    public ResponseEntity<String> addNewCategory(Map<String, String> requestMap)
     {
         try{
-            User user = userDao.findByEmailId(email);
+            User user = userDao.findByEmailId(requestMap.get("email"));
             if(user.getRole().equals("admin"))
             {
                 if(validateCategoryMap(requestMap, false)){

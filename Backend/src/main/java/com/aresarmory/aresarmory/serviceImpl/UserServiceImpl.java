@@ -23,7 +23,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResponseEntity<String> signUp(Map<String, String> requestMap) {
-        log.info("Inside signup {}", requestMap);
         try {
             if (validateSignUpMap(requestMap)) {
                 User user = userDao.findByEmailId(requestMap.get("email"));
@@ -43,7 +42,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public ResponseEntity<String> login(Map<String, String> requestMap) {
-        log.info("Inside login {}", requestMap);
         try {
             if (validateLoginMap(requestMap)) {
                 User user = userDao.findByEmailId(requestMap.get("email"));

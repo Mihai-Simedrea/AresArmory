@@ -10,5 +10,5 @@ import java.util.Map;
 @RequestMapping(path = "/category")
 public interface CategoryRest {
     @PostMapping(path = "/add")
-    ResponseEntity<String> addNewCategory(@RequestBody(required = true) Map<String, String> requestMap, String email);
+    ResponseEntity<String> addNewCategory(@RequestBody(required = true) Map<String, String> requestMap);
 }
