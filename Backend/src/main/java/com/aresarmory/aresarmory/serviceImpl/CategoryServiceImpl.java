@@ -29,16 +29,10 @@ public class CategoryServiceImpl  implements CategoryService {
     public ResponseEntity<String> addNewCategory(Map<String, String> requestMap)
     {
         try{
-            User user = userDao.findByEmailId(requestMap.get("email"));
-            if(user.getRole().equals("admin"))
-            {
-                if(validateCategoryMap(requestMap, false)){
-                    categoryDao.save(getCategoryFromMap(requestMap, false));
-                    return ArmoryUtils.getResponseEntity("Category Added Successfully", HttpStatus.OK);
-                }
+            if(validateCategoryMap(requestMap, false)){
+                categoryDao.save(getCategoryFromMap(requestMap, false));
+                return ArmoryUtils.getResponseEntity("Category Added Successfully", HttpStatus.OK);
             }
-            else
-                return ArmoryUtils.getResponseEntity(ArmoryConstants.UNAUTHORIZED_ACCESS, HttpStatus.INTERNAL_SERVER_ERROR);
         }catch (Exception ex){
             ex.printStackTrace();
         }
@@ -83,22 +77,17 @@ public class CategoryServiceImpl  implements CategoryService {
     @Override
     public ResponseEntity<String> updateCategory(Map<String, String> requestMap) {
         try{
-            User user = userDao.findByEmailId(requestMap.get("email"));
-            if(user.getRole().equals("admin")) {
-                if(validateCategoryMap(requestMap, true)) {
-                    Optional optional = categoryDao.findById(Integer.parseInt(requestMap.get("id")));
-                    if(optional.isPresent()){
-                        categoryDao.save(getCategoryFromMap(requestMap, true));
-                        return ArmoryUtils.getResponseEntity("Category Updated Successfully", HttpStatus.OK);
-                    }
-                    else{
-                        return ArmoryUtils.getResponseEntity("Category id does not exist", HttpStatus.OK);
-                    }
+            if(validateCategoryMap(requestMap, true)) {
+                Optional optional = categoryDao.findById(Integer.parseInt(requestMap.get("id")));
+                if(optional.isPresent()){
+                    categoryDao.save(getCategoryFromMap(requestMap, true));
+                    return ArmoryUtils.getResponseEntity("Category Updated Successfully", HttpStatus.OK);
                 }
-                return ArmoryUtils.getResponseEntity(ArmoryConstants.INVALID_DATA, HttpStatus.BAD_REQUEST);
+                else{
+                    return ArmoryUtils.getResponseEntity("Category id does not exist", HttpStatus.OK);
+                }
             }
-            else
-                return ArmoryUtils.getResponseEntity(ArmoryConstants.UNAUTHORIZED_ACCESS, HttpStatus.INTERNAL_SERVER_ERROR);
+            return ArmoryUtils.getResponseEntity(ArmoryConstants.INVALID_DATA, HttpStatus.BAD_REQUEST);
         }catch (Exception ex)
         {
             ex.printStackTrace();
