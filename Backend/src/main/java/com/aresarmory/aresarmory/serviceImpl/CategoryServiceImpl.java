@@ -7,12 +7,16 @@ import com.aresarmory.aresarmory.dao.CategoryDao;
 import com.aresarmory.aresarmory.dao.UserDao;
 import com.aresarmory.aresarmory.service.CategoryService;
 import com.aresarmory.aresarmory.utils.ArmoryUtils;
+import com.google.common.base.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class CategoryServiceImpl  implements CategoryService {
@@ -60,5 +64,45 @@ public class CategoryServiceImpl  implements CategoryService {
         }
         category.setName((requestMap.get("name")));
         return category;
+    }
+
+    @Override
+    public ResponseEntity<List<Category>> getAllCategory(String filterValue) {
+        try{
+            if(!Strings.isNullOrEmpty(filterValue) && filterValue.equalsIgnoreCase("true")) {
+                return new ResponseEntity<List<Category>>(categoryDao.getAllCategory(), HttpStatus.OK);
+            }
+            return new ResponseEntity<>(categoryDao.findAll(), HttpStatus.OK);
+        }catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        return new ResponseEntity<List<Category>>(new ArrayList<>(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @Override
+    public ResponseEntity<String> updateCategory(Map<String, String> requestMap) {
+        try{
+            User user = userDao.findByEmailId(requestMap.get("email"));
+            if(user.getRole().equals("admin")) {
+                if(validateCategoryMap(requestMap, true)) {
+                    Optional optional = categoryDao.findById(Integer.parseInt(requestMap.get("id")));
+                    if(optional.isPresent()){
+                        categoryDao.save(getCategoryFromMap(requestMap, true));
+                        return ArmoryUtils.getResponseEntity("Category Updated Successfully", HttpStatus.OK);
+                    }
+                    else{
+                        return ArmoryUtils.getResponseEntity("Category id does not exist", HttpStatus.OK);
+                    }
+                }
+                return ArmoryUtils.getResponseEntity(ArmoryConstants.INVALID_DATA, HttpStatus.BAD_REQUEST);
+            }
+            else
+                return ArmoryUtils.getResponseEntity(ArmoryConstants.UNAUTHORIZED_ACCESS, HttpStatus.INTERNAL_SERVER_ERROR);
+        }catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
