@@ -6,20 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="af8a2bf6-8514-4df0-b570-4f0a3c3139f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CategoryRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CategoryRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/ProductRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/ProductRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/UserRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CategoryRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CategoryRestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/ProductRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/ProductRestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/UserRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/UserRestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +83,7 @@
       <workItem from="1699627865068" duration="97000" />
       <workItem from="1699628015725" duration="10098000" />
       <workItem from="1699721457153" duration="7177000" />
+      <workItem from="1699736783745" duration="34000" />
     </task>
     <servers />
   </component>

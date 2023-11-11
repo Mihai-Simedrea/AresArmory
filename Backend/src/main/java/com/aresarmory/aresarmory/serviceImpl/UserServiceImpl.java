@@ -67,6 +67,7 @@ public class UserServiceImpl implements UserService {
         userInfo.put("username", user.getName());
         userInfo.put("email", user.getEmail());
         userInfo.put("contactNumber", user.getContactNumber());
+        userInfo.put("role", user.getRole());
         return userInfo;
     }
 
