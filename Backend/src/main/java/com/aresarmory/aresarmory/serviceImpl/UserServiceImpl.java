@@ -12,8 +12,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -47,7 +49,7 @@ public class UserServiceImpl implements UserService {
                 User user = userDao.findByEmailId(requestMap.get("email"));
                 if (!Objects.isNull(user)) {
                     ObjectMapper objectMapper = new ObjectMapper();
-                    String jsonString = objectMapper.writeValueAsString(Map.of("username", user.getName()));
+                    String jsonString = objectMapper.writeValueAsString(getUserInfo(user));
                     return ResponseEntity.ok().body(jsonString);
                 } else
                     return ArmoryUtils.getResponseEntity("Account not found", HttpStatus.BAD_REQUEST);
@@ -58,6 +60,31 @@ public class UserServiceImpl implements UserService {
         }
         return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
 
+    }
+
+    private Map<String, String> getUserInfo(User user) {
+        Map<String, String> userInfo = new HashMap<>();
+        userInfo.put("username", user.getName());
+        userInfo.put("email", user.getEmail());
+        userInfo.put("contactNumber", user.getContactNumber());
+        return userInfo;
+    }
+
+    @Override
+    public ResponseEntity<String> deleteUser(Integer id) {
+        try{
+            Optional optional = userDao.findById(id);
+            if(optional.isPresent())
+            {
+                userDao.deleteById(id);
+                return ArmoryUtils.getResponseEntity("User Deleted Successfully", HttpStatus.OK);
+            }
+            return ArmoryUtils.getResponseEntity("User id does not exist", HttpStatus.OK);
+        }catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     private boolean validateSignUpMap(Map<String, String> requestMap) {

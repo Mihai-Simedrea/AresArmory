@@ -4,9 +4,11 @@ import com.aresarmory.aresarmory.POJO.Category;
 import com.aresarmory.aresarmory.POJO.User;
 import com.aresarmory.aresarmory.constants.ArmoryConstants;
 import com.aresarmory.aresarmory.dao.CategoryDao;
+import com.aresarmory.aresarmory.dao.ProductDao;
 import com.aresarmory.aresarmory.dao.UserDao;
 import com.aresarmory.aresarmory.service.CategoryService;
 import com.aresarmory.aresarmory.utils.ArmoryUtils;
+import com.aresarmory.aresarmory.wrapper.ProductWrapper;
 import com.google.common.base.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,8 +24,6 @@ import java.util.Optional;
 public class CategoryServiceImpl  implements CategoryService {
     @Autowired
     CategoryDao categoryDao;
-    @Autowired
-    UserDao userDao;
 
     @Override
     public ResponseEntity<String> addNewCategory(Map<String, String> requestMap)
@@ -89,6 +89,24 @@ public class CategoryServiceImpl  implements CategoryService {
             }
             return ArmoryUtils.getResponseEntity(ArmoryConstants.INVALID_DATA, HttpStatus.BAD_REQUEST);
         }catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @Override
+    public ResponseEntity<String> deleteCategory(Integer id) {
+        try{
+            Optional optional = categoryDao.findById(id);
+            if(optional.isPresent())
+            {
+                categoryDao.deleteById(id);
+                return ArmoryUtils.getResponseEntity("Successfully Deleted Category", HttpStatus.OK);
+            }
+            else
+                return ArmoryUtils.getResponseEntity("Category id does not exist", HttpStatus.OK);
+        }catch(Exception ex)
         {
             ex.printStackTrace();
         }

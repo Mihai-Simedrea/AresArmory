@@ -18,5 +18,8 @@ public interface ProductRest {
     ResponseEntity<String> updateProduct(@RequestBody Map<String, String> requestMap);
 
     @DeleteMapping(path = "/delete/{id}")
-    ResponseEntity<String> deleteProduct(@PathVariable Integer id)
+    ResponseEntity<String> deleteProduct(@PathVariable Integer id);
+
+    @GetMapping(path = "/getByCategory/{id}")
+    ResponseEntity<List<ProductWrapper>> getByCategory(@PathVariable Integer id);
 }

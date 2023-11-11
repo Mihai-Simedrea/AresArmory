@@ -36,4 +36,15 @@ public class UserRestImpl implements UserRest {
         }
         return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @Override
+    public ResponseEntity<String> deleteUser(Integer id) {
+        try{
+            return userService.deleteUser(id);
+        }catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }
