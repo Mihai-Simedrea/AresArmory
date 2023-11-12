@@ -47,7 +47,8 @@ public class UserServiceImpl implements UserService {
         try {
             if (validateLoginMap(requestMap)) {
                 User user = userDao.findByEmailId(requestMap.get("email"));
-                if (!Objects.isNull(user)) {
+                if (!Objects.isNull(user) && user.getEmail().equals(requestMap.get("email")) &&
+                user.getPassword().equals(requestMap.get("password"))) {
                     ObjectMapper objectMapper = new ObjectMapper();
                     String jsonString = objectMapper.writeValueAsString(getUserInfo(user));
                     return ResponseEntity.ok().body(jsonString);
