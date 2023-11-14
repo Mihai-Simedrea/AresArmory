@@ -1,6 +1,5 @@
 package com.aresarmory.aresarmory.service;
 
-import com.aresarmory.aresarmory.POJO.User;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Map;

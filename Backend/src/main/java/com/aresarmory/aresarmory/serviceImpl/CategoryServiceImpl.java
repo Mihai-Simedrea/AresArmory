@@ -1,14 +1,10 @@
 package com.aresarmory.aresarmory.serviceImpl;
 
 import com.aresarmory.aresarmory.POJO.Category;
-import com.aresarmory.aresarmory.POJO.User;
 import com.aresarmory.aresarmory.constants.ArmoryConstants;
 import com.aresarmory.aresarmory.dao.CategoryDao;
-import com.aresarmory.aresarmory.dao.ProductDao;
-import com.aresarmory.aresarmory.dao.UserDao;
 import com.aresarmory.aresarmory.service.CategoryService;
 import com.aresarmory.aresarmory.utils.ArmoryUtils;
-import com.aresarmory.aresarmory.wrapper.ProductWrapper;
 import com.google.common.base.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -8,7 +8,8 @@ import org.hibernate.annotations.DynamicUpdate;
 import java.io.Serializable;
 import java.util.List;
 
-@NamedQuery(name = "Cart.findByUser", query = "select c from Cart c where c.user.id=:id")
+@NamedQuery(name = "Cart.getByUser", query = "select c from Cart c where c.user.id=:id")
+@NamedQuery(name = "Cart.getById", query = "select c from Cart c where c.id=:id")
 @Data
 @Entity
 @DynamicUpdate

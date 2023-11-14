@@ -1,5 +1,6 @@
 package com.aresarmory.aresarmory.POJO;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
@@ -7,6 +8,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import java.io.Serializable;
 
+@NamedQuery(name = "CartItem.getCartItemByCart", query = "select c from CartItem c where c.cart.id=:id")
 @Data
 @Entity
 @DynamicUpdate
@@ -26,5 +28,6 @@ public class CartItem implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "cart_id")
+    @JsonIgnore
     private Cart cart;
 }

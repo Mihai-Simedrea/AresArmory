@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "/cart")
 public interface CartRest {
     @GetMapping(path = "/get")
-    public ResponseEntity<Cart> getCartByUser(@RequestParam String email);
+    ResponseEntity<Cart> getCartByUser(@RequestParam String email);
 }

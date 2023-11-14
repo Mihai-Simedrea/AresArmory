@@ -11,4 +11,6 @@ public interface ProductDao extends JpaRepository<Product, Integer> {
     List<ProductWrapper> getAllProduct();
 
     List<ProductWrapper> getProductByCategory(@Param("id") Integer id);
+
+    Product getById(@Param("id") Integer id);
 }

@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
-import java.util.Optional;
 
 @Service
 public class CartServiceImpl implements CartService {
@@ -23,7 +22,7 @@ public class CartServiceImpl implements CartService {
     public ResponseEntity<Cart> getCartByUser(String email) {
         try{
             User user = userDao.findByEmail(email);
-            Cart cart = cartDao.findByUser(user.getId());
+            Cart cart = cartDao.getByUser(user.getId());
             if(Objects.isNull(cart))
             {
                 Cart newCart = new Cart();
