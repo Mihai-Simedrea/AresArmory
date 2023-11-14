@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
     public ResponseEntity<String> signUp(Map<String, String> requestMap) {
         try {
             if (validateSignUpMap(requestMap)) {
-                User user = userDao.findByEmailId(requestMap.get("email"));
+                User user = userDao.findByEmail(requestMap.get("email"));
                 if (Objects.isNull(user)) {
                     userDao.save(getUserFromMap(requestMap));
                     return ArmoryUtils.getResponseEntity("Successfully Registered", HttpStatus.OK);
@@ -46,7 +46,7 @@ public class UserServiceImpl implements UserService {
     public ResponseEntity<String> login(Map<String, String> requestMap) {
         try {
             if (validateLoginMap(requestMap)) {
-                User user = userDao.findByEmailId(requestMap.get("email"));
+                User user = userDao.findByEmail(requestMap.get("email"));
                 if (!Objects.isNull(user) && user.getEmail().equals(requestMap.get("email")) &&
                 user.getPassword().equals(requestMap.get("password"))) {
                     ObjectMapper objectMapper = new ObjectMapper();

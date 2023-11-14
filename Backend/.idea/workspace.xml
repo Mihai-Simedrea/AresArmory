@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8a2bf6-8514-4df0-b570-4f0a3c3139f6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Cart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/CartDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/CartItemDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartRest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartRestImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/ProductServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aresarmory/aresarmory/serviceImpl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +97,8 @@
       <workItem from="1699721457153" duration="7177000" />
       <workItem from="1699736783745" duration="34000" />
       <workItem from="1699783623096" duration="1464000" />
+      <workItem from="1699806409022" duration="1882000" />
+      <workItem from="1699970741083" duration="3484000" />
     </task>
     <servers />
   </component>

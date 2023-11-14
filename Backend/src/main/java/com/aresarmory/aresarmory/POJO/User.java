@@ -7,7 +7,7 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import java.io.Serializable;
 
-@NamedQuery(name = "User.findByEmailId", query = "select u from User u where u.email=:email")
+@NamedQuery(name = "User.findByEmail", query = "select u from User u where u.email=:email")
 @Data
 @Entity
 @DynamicInsert
@@ -39,4 +39,8 @@ public class User implements Serializable {
 
     @Column(name = "role")
     private String role;
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
 }

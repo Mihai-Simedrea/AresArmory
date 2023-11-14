@@ -2,10 +2,8 @@ package com.aresarmory.aresarmory.serviceImpl;
 
 import com.aresarmory.aresarmory.POJO.Category;
 import com.aresarmory.aresarmory.POJO.Product;
-import com.aresarmory.aresarmory.POJO.User;
 import com.aresarmory.aresarmory.constants.ArmoryConstants;
 import com.aresarmory.aresarmory.dao.ProductDao;
-import com.aresarmory.aresarmory.dao.UserDao;
 import com.aresarmory.aresarmory.service.ProductService;
 import com.aresarmory.aresarmory.utils.ArmoryUtils;
 import com.aresarmory.aresarmory.wrapper.ProductWrapper;
