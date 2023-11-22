@@ -10,7 +10,7 @@ import { CategoryModel } from 'src/app/components/shared/models/category.model';
 })
 export class CategoryComponent implements OnInit {
   constructor(private readonly router: Router,
-              private readonly categoryClient: CategoryClient) {
+    private readonly categoryClient: CategoryClient) {
 
   }
 
@@ -28,9 +28,13 @@ export class CategoryComponent implements OnInit {
 
   addCategory(): void {
     this.categoryModel.name = this.categoryName;
-    this.categoryClient.add(this.categoryModel).subscribe();
-    this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
-      this.router.navigate(['/category']);
-  }); 
+    this.categoryClient.add(this.categoryModel).subscribe(() => {
+
+    }, () => { }, () => {
+      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/category']);
+      });
+    });
+
   }
 }

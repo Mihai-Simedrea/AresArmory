@@ -38,6 +38,10 @@ export class CategoryClient {
   add(categoryModel: CategoryModel): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/add`, categoryModel);
   }
+
+  delete(categoryId: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/delete/${categoryId}`);
+  }
 }
 
 @Injectable({
