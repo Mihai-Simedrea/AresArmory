@@ -25,6 +25,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { CardComponent } from './components/card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProductComponent } from './pages/product/product.component'; 
+import { MatDialogModule } from '@angular/material/dialog'; 
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import { ProductComponent } from './pages/product/product.component';
     MatToolbarModule,
     MatIconModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

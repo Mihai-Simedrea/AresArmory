@@ -27,13 +27,12 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    console.log(this.loginModel);
-
     this.authClient.login(this.loginModel).subscribe(result => {
       this.snackBarService.open('Login successfully', 'Ok', {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
       });
+      localStorage.setItem("role", result.role);
       localStorage.setItem("username", result.username);
       this.router.navigate(['/home']);
     },

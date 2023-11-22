@@ -4,3 +4,17 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.btn {
+    justify-content: center;
+    display: flex;
+}
+
+.container-admin {
+    margin-top: 20px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

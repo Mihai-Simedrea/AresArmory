@@ -1,5 +1,14 @@
 <app-header></app-header>
 
+<div class="container-admin" *ngIf="role == 'admin'">
+  <h1>Add a new category</h1>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="categoryName">
+  </mat-form-field>
+  <button mat-button class="btn" (click)="addCategory()">Add</button>
+</div>
+
 <div class="container">
   <div *ngFor="let category of categories">
     <app-card [name]="category.name" [id]="category.id"></app-card>
