@@ -93,6 +93,6 @@ export class CartUserClient {
   constructor(private http: HttpClient) { }
 
   getUserCart(email: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${email}/get`);
+    return this.http.get(`${this.baseUrl}/get/${email}`);
   }
 }
