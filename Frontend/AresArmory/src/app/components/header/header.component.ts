@@ -20,4 +20,8 @@ export class HeaderComponent implements OnInit {
     localStorage.clear();
     this.router.navigate(['/login']);
   }
+
+  navigateTo(route: string): void {
+    this.router.navigate([route]);
+  }
 }

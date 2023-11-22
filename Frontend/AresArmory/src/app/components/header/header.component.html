@@ -3,19 +3,19 @@
     <span class="store-name">Ares Armory</span>
     <span class="spacer"></span>
     <div class="menu-items">
-      <button mat-icon-button aria-label="Home">
+      <button mat-icon-button aria-label="Home" (click)="navigateTo('/home')">
         <mat-icon>home</mat-icon>
       </button>
       <span class="menu-text">Home</span>
-      <button mat-icon-button aria-label="Products">
+      <button mat-icon-button aria-label="Products" (click)="navigateTo('/category')">
         <mat-icon>storefront</mat-icon>
       </button>
       <span class="menu-text">Products</span>
-      <button mat-icon-button aria-label="Contact Us">
+      <button mat-icon-button aria-label="Contact Us" (click)="navigateTo('/contact')">
         <mat-icon>mail</mat-icon>
       </button>
       <span class="menu-text">Contact</span>
-      <button mat-icon-button aria-label="Cart">
+      <button mat-icon-button aria-label="Cart" (click)="navigateTo('/cart')">
         <mat-icon>shopping_cart</mat-icon>
       </button>
       <span class="menu-text">Cart</span>

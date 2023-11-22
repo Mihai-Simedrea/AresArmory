@@ -18,6 +18,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { CategoryComponent } from './pages/category/category.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { MatIconModule } from '@angular/material/icon';
     RegisterComponent,
     FooterComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    CategoryComponent,
+    ContactComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
