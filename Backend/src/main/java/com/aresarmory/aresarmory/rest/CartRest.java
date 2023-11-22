@@ -8,6 +8,6 @@ import java.util.Map;
 
 @RequestMapping(path = "/cart")
 public interface CartRest {
-    @GetMapping(path = "/get")
-    ResponseEntity<String> getCartByUser(@RequestParam String email);
+    @GetMapping(path = "/get/{email}")
+    ResponseEntity<String> getCartByUser(@PathVariable String email);
 }
