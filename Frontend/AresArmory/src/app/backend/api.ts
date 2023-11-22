@@ -11,13 +11,26 @@ import { environment } from '../environments/environment';
 export class AuthClient {
   private baseUrl = `${environment.backendApiUrl}/user`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   signUp(authModel: AuthModel): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/signup`, authModel);
   }
-  
+
   login(loginModel: LoginModel): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/login`, loginModel);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CategoryClient {
+  private baseUrl = `${environment.backendApiUrl}/category`;
+
+  constructor(private http: HttpClient) { }
+
+  getAll(): Observable<any> {
+    return this.http.get(`${this.baseUrl}/get`);
   }
 }
