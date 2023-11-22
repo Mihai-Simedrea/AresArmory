@@ -6,6 +6,7 @@ import { LoginModel } from '../components/shared/models/login.model';
 import { environment } from '../environments/environment';
 import { CategoryModel } from '../components/shared/models/category.model';
 import { ProductModel } from '../components/shared/models/product.model';
+import { CartModel } from '../components/shared/models/cart.model';
 
 @Injectable({
   providedIn: 'root',
@@ -63,5 +64,35 @@ export class ProductClient {
 
   delete(productId: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/delete/${productId}`);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CartClient {
+  private baseUrl = `${environment.backendApiUrl}/cart_item`;
+
+  constructor(private http: HttpClient) { }
+
+  add(cartModel: CartModel): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/add`, cartModel);
+  }
+
+  remove(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/delete/${id}`);
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class CartUserClient {
+  private baseUrl = `${environment.backendApiUrl}/cart`;
+
+  constructor(private http: HttpClient) { }
+
+  getUserCart(email: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}/${email}/get`);
   }
 }
