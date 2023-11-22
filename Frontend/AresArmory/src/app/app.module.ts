@@ -23,7 +23,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CardComponent } from './components/card/card.component';
-import { MatCardModule } from '@angular/material/card'; 
+import { MatCardModule } from '@angular/material/card';
+import { ProductComponent } from './pages/product/product.component'; 
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MatCardModule } from '@angular/material/card';
     CategoryComponent,
     ContactComponent,
     CartComponent,
-    CardComponent
+    CardComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

@@ -34,3 +34,16 @@ export class CategoryClient {
     return this.http.get(`${this.baseUrl}/get`);
   }
 }
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductClient {
+  private baseUrl = `${environment.backendApiUrl}/product`;
+
+  constructor(private http: HttpClient) { }
+
+  getByCategory(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/getByCategory/${id}`);
+  }
+}
