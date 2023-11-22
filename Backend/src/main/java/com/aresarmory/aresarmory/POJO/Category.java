@@ -1,5 +1,6 @@
 package com.aresarmory.aresarmory.POJO;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
@@ -23,6 +24,7 @@ public class Category implements Serializable {
     private Integer id;
     @Column(name = "name")
     private String name;
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @JsonIgnore
     private List<Product> products;
 }

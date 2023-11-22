@@ -5,24 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8a2bf6-8514-4df0-b570-4f0a3c3139f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartItemRest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartItemRestImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartItemServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/CartItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/CartItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/CartDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/CartDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/CartItemDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/CartItemDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/UserRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/UserRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartRestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/POJO/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CategoryRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CategoryRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CategoryRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CategoryRestImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CategoryServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +92,7 @@
       <workItem from="1699806409022" duration="1882000" />
       <workItem from="1699970741083" duration="3484000" />
       <workItem from="1699976796752" duration="4983000" />
+      <workItem from="1700647554047" duration="2464000" />
     </task>
     <servers />
   </component>
