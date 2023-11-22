@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
       });
+      
       localStorage.setItem("role", result.role);
       localStorage.setItem("username", result.username);
       localStorage.setItem("email", result.email);
