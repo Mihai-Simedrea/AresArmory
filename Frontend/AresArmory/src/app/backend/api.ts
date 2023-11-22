@@ -60,4 +60,8 @@ export class ProductClient {
   add(productModel: ProductModel): Observable<any> {
     return this.http.post<any>(`${this.baseUrl}/add`, productModel);
   }
+
+  delete(productId: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/delete/${productId}`);
+  }
 }

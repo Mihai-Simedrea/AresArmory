@@ -40,7 +40,11 @@ export class CardComponent implements OnInit {
       });
 
     } else {
-      console.log('delete product');
+      this.productClient.delete(this.id).subscribe(() => { }, () => { }, () => {
+        this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+          this.router.navigate(['/product']);
+        });
+      })
     }
   }
 }
