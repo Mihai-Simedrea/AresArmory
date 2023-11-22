@@ -6,6 +6,9 @@
     <p>
       <b>Description: </b>{{description}}
     </p>
+    <p *ngIf="type != 'category'">
+      <b>Price: </b>{{price}}
+    </p>
   </mat-card-content>
   <mat-card-actions class="actions">
     <button mat-button *ngIf="type != 'category'">ADD</button>

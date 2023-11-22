@@ -11,6 +11,7 @@ export class CardComponent implements OnInit {
   @Input() name!: string;
   @Input() id!: number;
   @Input() description!: string;
+  @Input() price!: number;
   @Input() type!: string;
   role!: string;
 
