@@ -1,19 +1,14 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
+<mat-card class="example-card" (click)="redirectTo()">
+  <mat-card-header class="center">
     <mat-card-title>{{name}}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image class="content" (click)="redirectTo()" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   <mat-card-content class="content" (click)="redirectTo()">
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      <b>Description: </b>{{description}}
     </p>
   </mat-card-content>
   <mat-card-actions class="actions">
-    <button mat-button>ADD</button>
+    <button mat-button *ngIf="type != 'category'">ADD</button>
     <button *ngIf="role == 'admin'" mat-raised-button color="warn" (click)="deleteItem()">DELETE</button>
   </mat-card-actions>
 </mat-card>

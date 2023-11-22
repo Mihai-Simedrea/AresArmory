@@ -10,6 +10,7 @@ import { CategoryClient, ProductClient } from 'src/app/backend/api';
 export class CardComponent implements OnInit {
   @Input() name!: string;
   @Input() id!: number;
+  @Input() description!: string;
   @Input() type!: string;
   role!: string;
 
