@@ -5,6 +5,7 @@ import { AuthModel } from '../components/shared/models/auth.model';
 import { LoginModel } from '../components/shared/models/login.model';
 import { environment } from '../environments/environment';
 import { CategoryModel } from '../components/shared/models/category.model';
+import { ProductModel } from '../components/shared/models/product.model';
 
 @Injectable({
   providedIn: 'root',
@@ -54,5 +55,9 @@ export class ProductClient {
 
   getByCategory(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/getByCategory/${id}`);
+  }
+
+  add(productModel: ProductModel): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/add`, productModel);
   }
 }

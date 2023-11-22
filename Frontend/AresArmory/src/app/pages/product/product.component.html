@@ -1,5 +1,22 @@
 <app-header></app-header>
 
+<div class="container-admin" *ngIf="role == 'admin'">
+  <h1>Add a new product</h1>
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="productModel.name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <input matInput [(ngModel)]="productModel.description">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Price</mat-label>
+    <input matInput [(ngModel)]="productModel.price">
+  </mat-form-field>
+  <button mat-button class="btn" (click)="addProduct()">Add</button>
+</div>
+
 <div class="container">
   <div *ngFor="let product of products">
     <app-card [name]="product.name" [id]="product.id"></app-card>
