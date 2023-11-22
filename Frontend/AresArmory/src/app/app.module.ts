@@ -21,6 +21,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { CategoryComponent } from './pages/category/category.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CardComponent } from './components/card/card.component';
+import { MatCardModule } from '@angular/material/card'; 
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { CartComponent } from './pages/cart/cart.component';
     HeaderComponent,
     CategoryComponent,
     ContactComponent,
-    CartComponent
+    CartComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import { CartComponent } from './pages/cart/cart.component';
     HttpClientModule,
     MatSnackBarModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
