@@ -25,5 +25,6 @@ public class Category implements Serializable {
     @Column(name = "name")
     private String name;
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Product> products;
 }
