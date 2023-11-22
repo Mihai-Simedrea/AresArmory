@@ -6,11 +6,11 @@
     <mat-label>Name</mat-label>
     <input matInput [(ngModel)]="categoryName">
   </mat-form-field>
-  <button mat-button class="btn" (click)="addCategory()">Add</button>
+  <button mat-button class="btn" (click)="addCategory()">ADD</button>
 </div>
 
 <div class="container">
   <div *ngFor="let category of categories">
-    <app-card [name]="category.name" [id]="category.id"></app-card>
+    <app-card [name]="category.name" [id]="category.id" [type]="'category'" [description]="category.description"></app-card>
   </div>
 </div>
