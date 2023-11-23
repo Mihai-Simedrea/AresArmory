@@ -82,6 +82,10 @@ export class CartClient {
   remove(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/delete/${id}`);
   }
+
+  get(id: number): Observable<any> {
+    return this.http.get(`${this.baseUrl}/get/${id}`);
+  }
 }
 
 @Injectable({
