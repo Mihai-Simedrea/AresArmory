@@ -9,8 +9,9 @@ import java.util.Map;
 
 @RequestMapping("/cart_item")
 public interface CartItemRest {
-    @GetMapping(path = "/get")
-    ResponseEntity<List<CartItem>> getCartItemByCart(@RequestParam Integer id);
+
+    @GetMapping(path = "/get/{id}")
+    ResponseEntity<List<CartItem>> getCartItem(@PathVariable Integer id);
 
     @PostMapping(path = "/add")
     ResponseEntity<String> addCartItem(@RequestBody Map<String, String> requestMap);

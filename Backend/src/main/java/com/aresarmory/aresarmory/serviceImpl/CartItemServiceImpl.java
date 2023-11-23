@@ -28,17 +28,6 @@ public class CartItemServiceImpl implements CartItemService {
 
     @Autowired
     ProductDao productDao;
-    @Override
-    public ResponseEntity<List<CartItem>> GetCartItemByCart(Integer id) {
-        try{
-            Cart cart = cartDao.getById(id);
-            return new ResponseEntity<>(cartItemDao.getCartItemByCart(cart.getId()), HttpStatus.OK);
-        }catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-        return new ResponseEntity<>(new ArrayList<>(), HttpStatus.INTERNAL_SERVER_ERROR);
-    }
 
     @Override
     public ResponseEntity<String> addCartItem(Map<String, String> requestMap) {
@@ -71,5 +60,17 @@ public class CartItemServiceImpl implements CartItemService {
             ex.printStackTrace();
         }
         return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @Override
+    public ResponseEntity<List<CartItem>> getCartItem(Integer id) {
+        try{
+            Cart cart = cartDao.getById(id);
+            return new ResponseEntity<>(cartItemDao.getCartItemByCart(cart.getId()), HttpStatus.OK);
+        }catch(Exception ex)
+        {
+            ex.printStackTrace();
+        }
+        return new ResponseEntity<>(new ArrayList<>(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

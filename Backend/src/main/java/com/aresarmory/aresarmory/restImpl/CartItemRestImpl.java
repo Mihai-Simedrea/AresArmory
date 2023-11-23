@@ -18,10 +18,11 @@ import java.util.Map;
 public class CartItemRestImpl implements CartItemRest {
     @Autowired
     CartItemService cartItemService;
+
     @Override
-    public ResponseEntity<List<CartItem>> getCartItemByCart(Integer id) {
+    public ResponseEntity<List<CartItem>> getCartItem(Integer id) {
         try{
-            return cartItemService.GetCartItemByCart(id);
+            return cartItemService.getCartItem(id);
         }catch(Exception ex)
         {
             ex.printStackTrace();

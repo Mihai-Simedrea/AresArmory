@@ -7,9 +7,10 @@ import java.util.List;
 import java.util.Map;
 
 public interface CartItemService {
-    ResponseEntity<List<CartItem>> GetCartItemByCart(Integer id);
 
     ResponseEntity<String> addCartItem(Map<String, String> requestMap);
 
     ResponseEntity<String> deleteCartItem(Integer id);
+
+    ResponseEntity<List<CartItem>> getCartItem(Integer id);
 }
