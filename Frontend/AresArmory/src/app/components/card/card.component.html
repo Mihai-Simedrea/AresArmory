@@ -11,8 +11,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions class="actions">
-    <button mat-button *ngIf="type != 'category'" (click)="add()">ADD</button>
-    <button mat-button *ngIf="type != 'category'" (click)="remove()">REMOVE</button>
+    <button mat-button *ngIf="type != 'category'" (click)="add()">ADD TO CART</button>
     <button *ngIf="role == 'admin'" mat-raised-button color="warn" (click)="deleteItem()">DELETE</button>
   </mat-card-actions>
 </mat-card>

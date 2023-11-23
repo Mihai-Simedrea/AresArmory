@@ -27,10 +27,7 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.role = localStorage.getItem('role')!;
-
-    this.cartUserClient.getUserCart(localStorage.getItem("email")!).subscribe(id => {
-      this.cartId = id;
-    });
+    this.cartId = parseInt(localStorage.getItem('cartId')!);
   }
 
   redirectTo(): void {
@@ -42,10 +39,6 @@ export class CardComponent implements OnInit {
     this.cartModel.cart_id = this.cartId;
     this.cartModel.product_id = this.id;
     this.cartClient.add(this.cartModel).subscribe();
-  }
-
-  remove(): void {
-    this.cartClient.remove(this.id).subscribe();
   }
 
   deleteItem(): void {
