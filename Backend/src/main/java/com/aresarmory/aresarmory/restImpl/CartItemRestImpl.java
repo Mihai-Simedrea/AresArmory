@@ -42,9 +42,9 @@ public class CartItemRestImpl implements CartItemRest {
     }
 
     @Override
-    public ResponseEntity<String> deleteCartItem(Integer id) {
+    public ResponseEntity<String> deleteCartItem(Integer id, Integer cartId) {
         try{
-            return cartItemService.deleteCartItem(id);
+            return cartItemService.deleteCartItem(id, cartId);
         }catch(Exception ex){
             ex.printStackTrace();
         }

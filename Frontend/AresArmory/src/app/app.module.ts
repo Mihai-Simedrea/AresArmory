@@ -24,8 +24,13 @@ import { CartComponent } from './pages/cart/cart.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CardComponent } from './components/card/card.component';
 import { MatCardModule } from '@angular/material/card';
-import { ProductComponent } from './pages/product/product.component'; 
-import { MatDialogModule } from '@angular/material/dialog'; 
+import { ProductComponent } from './pages/product/product.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSortModule } from '@angular/material/sort';
+import { OrderComponent } from './pages/order/order.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     ContactComponent,
     CartComponent,
     CardComponent,
-    ProductComponent
+    ProductComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,11 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

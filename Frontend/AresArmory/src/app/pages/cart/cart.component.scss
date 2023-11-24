@@ -1,0 +1,17 @@
+.price {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.centered-header,
+.centered-cell {
+  text-align: center; /* Centers the content within table cells */
+}

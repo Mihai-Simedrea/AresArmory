@@ -16,6 +16,6 @@ public interface CartItemRest {
     @PostMapping(path = "/add")
     ResponseEntity<String> addCartItem(@RequestBody Map<String, String> requestMap);
 
-    @DeleteMapping(path = "/delete/{id}")
-    ResponseEntity<String> deleteCartItem(@PathVariable Integer id);
+    @DeleteMapping(path = "/delete/{id}/{cartId}")
+    ResponseEntity<String> deleteCartItem(@PathVariable Integer id, @PathVariable Integer cartId);
 }

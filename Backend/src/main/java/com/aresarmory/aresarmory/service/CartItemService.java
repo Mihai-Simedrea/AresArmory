@@ -10,7 +10,7 @@ public interface CartItemService {
 
     ResponseEntity<String> addCartItem(Map<String, String> requestMap);
 
-    ResponseEntity<String> deleteCartItem(Integer id);
+    ResponseEntity<String> deleteCartItem(Integer id, Integer cartId);
 
     ResponseEntity<List<CartItem>> getCartItem(Integer id);
 }

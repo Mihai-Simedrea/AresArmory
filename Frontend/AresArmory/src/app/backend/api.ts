@@ -79,8 +79,8 @@ export class CartClient {
     return this.http.post<any>(`${this.baseUrl}/add`, cartModel);
   }
 
-  remove(id: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/delete/${id}`);
+  remove(id: number, cartId: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/delete/${id}/${cartId}`);
   }
 
   get(id: number): Observable<any> {

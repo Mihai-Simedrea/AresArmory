@@ -45,22 +45,25 @@ public class CartItemServiceImpl implements CartItemService {
     }
 
     @Override
-    public ResponseEntity<String> deleteCartItem(Integer id) {
-        try{
-            Optional optional = cartItemDao.findById(id);
-            if(optional.isPresent())
-            {
-                cartItemDao.deleteById(id);
-                return ArmoryUtils.getResponseEntity("Successfully Removed Product from Cart", HttpStatus.OK);
+    public ResponseEntity<String> deleteCartItem(Integer id, Integer cartId) {
+        try {
+            Cart cart = cartDao.getById(cartId);
+            List<CartItem> cartItems = cartItemDao.getCartItemByCart(cart.getId());
+
+            for (CartItem cartItem : cartItems) {
+                if (cartItem.getProduct().getId().equals(id)) {
+                    cartItemDao.delete(cartItem);
+                    return ArmoryUtils.getResponseEntity("Successfully Removed Product from Cart", HttpStatus.OK);
+                }
             }
-            else
-                return ArmoryUtils.getResponseEntity("Product not in Cart", HttpStatus.OK);
-        }catch(Exception ex)
-        {
+
+            return ArmoryUtils.getResponseEntity("Product not in Cart", HttpStatus.NOT_FOUND);
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
 
     @Override
     public ResponseEntity<List<CartItem>> getCartItem(Integer id) {
