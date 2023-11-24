@@ -6,12 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="af8a2bf6-8514-4df0-b570-4f0a3c3139f6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartItemRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartItemRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartItemRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartItemRestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartItemServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/pages/cart/cart.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/pages/cart/cart.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/rest/CartRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartRestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/restImpl/CartRestImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/service/CartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aresarmory/aresarmory/serviceImpl/CartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/pages/cart/cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Frontend/AresArmory/src/app/pages/cart/cart.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

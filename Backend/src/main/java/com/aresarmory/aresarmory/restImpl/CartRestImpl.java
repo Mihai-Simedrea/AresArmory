@@ -26,4 +26,14 @@ public class CartRestImpl implements CartRest {
         }
         return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @Override
+    public ResponseEntity<String> deleteCartByUser(String email) {
+        try {
+            return cartService.deleteCartByUser(email);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return ArmoryUtils.getResponseEntity(ArmoryConstants.SOMETHING_WENT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }

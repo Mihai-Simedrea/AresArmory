@@ -75,6 +75,7 @@ export class CartComponent implements OnInit {
 
   placeOrder(): void {
     this.router.navigate(['/order']);
+    this.cartUserClient.deleteUserCart(localStorage.getItem("email")!).subscribe();
   }
 
   updateDataSource(): void {

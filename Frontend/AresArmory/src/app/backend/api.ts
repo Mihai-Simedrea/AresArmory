@@ -99,4 +99,8 @@ export class CartUserClient {
   getUserCart(email: string): Observable<any> {
     return this.http.get(`${this.baseUrl}/get/${email}`);
   }
+
+  deleteUserCart(email: string): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/delete/${email}`);
+  }
 }

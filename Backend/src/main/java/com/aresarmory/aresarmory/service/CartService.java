@@ -7,4 +7,5 @@ import java.util.Map;
 
 public interface CartService {
     ResponseEntity<String> getCartByUser(String email);
+    ResponseEntity<String> deleteCartByUser(String email);
 }

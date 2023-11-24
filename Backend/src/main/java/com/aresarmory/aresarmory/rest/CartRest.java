@@ -10,4 +10,7 @@ import java.util.Map;
 public interface CartRest {
     @GetMapping(path = "/get/{email}")
     ResponseEntity<String> getCartByUser(@PathVariable String email);
+
+    @DeleteMapping(path = "/delete/{email}")
+    ResponseEntity<String> deleteCartByUser(@PathVariable String email);
 }
