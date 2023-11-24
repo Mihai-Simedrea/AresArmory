@@ -14,7 +14,7 @@
         </mat-form-field>
         <mat-form-field style="margin-bottom: 10px;">
             <mat-label>Password</mat-label>
-            <input matInput [(ngModel)]="authModel.password">
+            <input type="password" matInput [(ngModel)]="authModel.password">
         </mat-form-field>
         <button mat-button mat-raised-button color="primary" style="margin-bottom: 10px;" (click)="register()">Register</button>
         <p class="info">Already have an account? <a href="/login">Login here</a></p>

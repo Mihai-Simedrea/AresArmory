@@ -6,7 +6,7 @@
         </mat-form-field>
         <mat-form-field>
             <mat-label>Password</mat-label>
-            <input matInput [(ngModel)]="loginModel.password">
+            <input type="password" matInput [(ngModel)]="loginModel.password">
         </mat-form-field>
         <button mat-button mat-raised-button color="primary" (click)="login()">Login</button>
         <p class="info">Don't have an account? <a href="/register">Register here</a></p>
